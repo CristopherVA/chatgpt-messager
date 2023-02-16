@@ -5,7 +5,8 @@ import admin from 'firebase-admin'
 import query from '../../lib/queryApi';
 
 type Data = {
-    name: string
+    name: string,
+    answer: string,
 }
 
 export default async function handler(
@@ -45,6 +46,5 @@ export default async function handler(
         .collection('messages')
         .add(message);
 
-    res.status(200).json({ answer: message.text } as string
-        )
+    res.status(200).json({ answer: message.text })
 }
