@@ -5,7 +5,6 @@ import admin from 'firebase-admin'
 import query from '../../lib/queryApi';
 
 type Data = {
-    name: string,
     answer: string,
 }
 
