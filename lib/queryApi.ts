@@ -9,7 +9,7 @@ const query = async(prompt: string, chatId: string, model:string) => {
         max_tokens: 1000,
         frequency_penalty: 0,
         presence_penalty: 0
-    }).then(res => res.data.choices[0].text).catch(e => `ChatGPT was unable to find an answer for that! (Error ${e})`)
+    }).then((res: any) => res.data.choices[0].text).catch((e: ErrorCallback) => `ChatGPT was unable to find an answer for that! (Error ${e})`)
 
     return res
 }
