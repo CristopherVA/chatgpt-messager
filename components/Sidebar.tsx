@@ -9,6 +9,7 @@ import ModelSelection from "./ModelSelection";
 import Skeleton from "./Skeleton";
 
 function Sidebar() {
+
   const { data: session } = useSession();
 
   const [chats, loading, error] = useCollection(
@@ -18,6 +19,8 @@ function Sidebar() {
         orderBy("createdAt", "asc")
       )
   );
+
+  console.log(chats);
 
   return (
     <div className="p-2 flex flex-col h-screen">
